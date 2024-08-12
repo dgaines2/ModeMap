@@ -269,7 +269,7 @@ if args.MapMode == '1D':
 
         outputWriterCSV.writerow([]);
 
-        outputWriterCSV.writerow(["Modulation #", "Q [amu^1/2 A"]);
+        outputWriterCSV.writerow(["Modulation #", "Q [amu^1/2 A]"]);
 
         for i, dispAmplitude in enumerate(modulations):
             outputWriterCSV.writerow([i + 1, dispAmplitude]);
