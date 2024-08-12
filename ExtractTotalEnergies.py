@@ -9,7 +9,7 @@ import re;
 # This script assumes that the single-point calculations on the modulated structures were run in numbered directories, e.g. 001, 002, ..., NNN.
 # It expects each directory matching this pattern to contain a VASP OSSICAR file with a total energy.
 
-dirRegex = re.compile("^\d+$");
+dirRegex = re.compile("^disp-\d+$");
 
 oszicarEnergyRegex = re.compile("E0= (?P<e0>[+-]?\.\d+E[+-]?\d+)");
 
@@ -37,7 +37,8 @@ for entry in os.listdir("./"):
 
 		inputReader.close();
 
-		data.append((int(entry), totalEnergy));
+		entry_as_number = int(entry.split("-")[1])
+		data.append((entry_as_number, totalEnergy));
 
 # Write a CSV-format file listing the directory (moduation) numbers and extracted total energies.
 
