@@ -13,7 +13,7 @@ import numpy as np;
 import matplotlib as mpl;
 import matplotlib.pyplot as plt;
 
-from mpl_toolkits.axes_grid.anchored_artists import AnchoredText;
+from matplotlib.offsetbox import AnchoredText;
 
 from scipy.optimize import curve_fit;
 
