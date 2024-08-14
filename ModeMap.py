@@ -170,7 +170,7 @@ for i, qRange in enumerate(qRanges):
             raise Exception("Error: Mode-coordinate ranges should be specified as three numbers (start, stop, step).");
 
         start, stop, step = elements;
-        qRanges[i] = np.arange(start, stop + step, step);
+        qRanges[i] = np.round(np.arange(start, stop + step, step), 8);
 
 args.QRange1, args.QRange2 = qRanges;
 
